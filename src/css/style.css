@@ -1,0 +1,30 @@
+@font-face {
+    font-family: sourceSansProRegular;
+    src: url(../fonts/sourceSansProRegular.otf);
+}
+
+@font-face {
+    font-family: sourceSansProBold;
+    src: url(../fonts/sourceSansProBold.otf);
+}
+
+@font-face {
+    font-family: castle;
+    src: url(../fonts/castle.ttf);
+}
+
+@font-face {
+    font-family: sourceSansProLight;
+    src: url(../fonts/sourceSansProLight.otf);
+}
+
+body{
+    background-color: #ecf0f1;
+    padding: 0;
+    margin: 0;
+    font-family: sourceSansProRegular;
+}
+
+.image-filter{
+    -webkit-filter: grayscale(60%);
+}
