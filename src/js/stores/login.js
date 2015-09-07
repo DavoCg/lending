@@ -18,7 +18,7 @@ var loginStore = Reflux.createStore({
         var self = this;
         requester.post('/login', payload, function(err, token){
             if(err) return self.trigger({err: err.message});
-            auth.setToken('asmr', token);
+            auth.setToken('lending', token);
             self.trigger(true);
         })
     },
@@ -33,7 +33,7 @@ var loginStore = Reflux.createStore({
     },
     logout: function logout(){
         this.user = {};
-        return auth.removeToken('asmr');
+        return auth.removeToken('lending');
     }
 });
 

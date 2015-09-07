@@ -1,6 +1,6 @@
 module.exports = {
     checkAuth: function checkAuth(){
-        return !!localStorage.asmr;
+        return !!localStorage.lending;
     },
 
     setToken: function setToken(name, content){

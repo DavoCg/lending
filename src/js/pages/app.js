@@ -1,5 +1,4 @@
-var React = require('react');
-var Router = require('react-router');
+var { React, Router, Style } = require('../utils/base');
 var { RouteHandler } = Router;
 
 var App = React.createClass({

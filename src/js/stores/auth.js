@@ -18,7 +18,7 @@ var authStore = Reflux.createStore({
         var self = this;
         if(this.user) this.trigger(this.user);
         requester.get('/who', function(err, user){
-            if(err && err.status === 401) auth.removeToken('asmr');
+            if(err && err.status === 401) auth.removeToken('lending');
             self.user = user;
             self.trigger(self.user);
         });
@@ -27,7 +27,7 @@ var authStore = Reflux.createStore({
     refreshUser: function refreshUser(){
         var self = this;
         requester.get('/who', function(err, user){
-            if(err && err.status === 401) auth.removeToken('asmr');
+            if(err && err.status === 401) auth.removeToken('lending');
             self.user = user;
             self.trigger(self.user);
         });

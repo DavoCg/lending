@@ -33,7 +33,8 @@ var Col = React.createClass({
             })
         }
 
-        var style = this.props.style || {};
+        var base = (this.props.raw) ? {margin: '0', padding: '0'} : {};
+        var style = _.merge(base, this.props.style);
 
         return (
             <div style={style} className={classNames(classes)}>

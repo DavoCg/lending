@@ -1,37 +1,56 @@
-var React = require('react');
-var Router = require('react-router');
-var Reflux = require('reflux');
-var Actions = require('../actions');
-var authStore = require('../stores/auth');
-var { Box, Row, Col } = require('../librairies/react-flex-grid');
+var { React, Router, Reflux, Actions, Auth, Row, Box, Col, styles } = require('../utils/base');
+var { NavBar, ContentBox } = require('../components');
+var { authStore } = require('../stores');
 var { RouteHandler, Navigation } = Router;
-var Auth = require('../utils/auth');
 var _ = require('lodash');
+
+var boxes = require('../utils/api');
 
 var Home = React.createClass({
 
     mixins: [Reflux.ListenerMixin, Navigation, Auth],
 
-    getInitialState: function getInitialState(){
-        return ({
-            user: {}
-        })
-    },
-
-    componentWillMount: function componentWillMount(){
-        this.checkAuth() || this.transitionTo('login');
-        this.listenTo(authStore, this.setUser);
-        Actions.getUser();
-    },
-
-    setUser: function setUser(user){
-        this.setState({user: user});
+    renderBoxes: function renderBoxes(boxes){
+        return _.map(boxes, function(boxe){
+            return ( <ContentBox data={boxe}/>)
+        });
     },
 
     render: function render(){
         return (
             <div>
-                <p>{this.state.user.name}</p>
+                <Row style={styles.home.banner}>
+                    <Col
+                        raw={true}
+                        lg={24}
+                        md={24}
+                        xs={24}
+                        sm={24}>
+                        <NavBar/>
+                        <Row>
+                            <Col
+                                style={{marginTop: '130px'}}
+                                lg={24}
+                                md={24}
+                                sm={24}
+                                xs={24}>
+                                <p style={styles.home.slogan}>Bienvenue sur Davo Lending</p>
+                                <p style={styles.home.subSlogan}>Soyez prêt à emprunter.</p>
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col
+                        lg={24}
+                        md={24}
+                        xs={24}
+                        sm={24}>
+                        <Row>
+                            {this.renderBoxes(boxes)}
+                        </Row>
+                    </Col>
+                </Row>
             </div>
         );
     }

@@ -1,10 +1,5 @@
-var React = require('react');
-var Router = require('react-router');
-var Reflux = require('reflux');
-var Actions = require('../actions');
-var { Box, Row, Col } = require('../librairies/react-flex-grid');
+var { React, Router, Reflux, Actions, Auth, Row, Box, Col, Style } = require('../utils/base');
 var { RouteHandler, Navigation } = Router;
-var Auth = require('../utils/auth');
 var _ = require('lodash');
 
 var NotFound = React.createClass({

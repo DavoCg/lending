@@ -12,7 +12,7 @@ var Row = React.createClass({
             })
         }
 
-        var style = this.props.style || {};
+        var style = _.merge({margin: '0', padding: '0'}, this.props.style);
 
         return (
             <div style={style} className={classNames(classes)}>
