@@ -18,9 +18,17 @@ var StatusBar = React.createClass({
         })
     },
 
-     componentDidMount: function componentDidMount(){
+    componentDidMount: function componentDidMount(){
+        var self = this;
         this.setInnerWidth();
-     },
+        window.addEventListener('resize', function(){
+            self.setInnerWidth();
+        })
+    },
+
+    componentWillUnmount: function componentWillUnmount(){
+        window.removeEventListener('resize');
+    },
 
     setInnerWidth: function setInnerWidth(){
         var outerWidth = document.getElementById('outer').offsetWidth;
@@ -32,7 +40,7 @@ var StatusBar = React.createClass({
     },
 
     render: function render(){
-        
+
         var inner = {
             height: '8px',
             width: this.state.innerWidth + 'px',
@@ -40,16 +48,16 @@ var StatusBar = React.createClass({
             backgroundColor: 'rgba(102, 230, 156, 0.83)'
         };
 
-
         return (
             <div>
-               <div id='outer' style={outer}>
-                   <div style={inner}>
-                   </div>
-               </div>
+                <div id='outer' style={outer}>
+                    <div style={inner}>
+                    </div>
+                </div>
                 <div style={{marginTop: '3px'}}>
                     <span><strong>{this.props.current}</strong> € collectés</span>
-                    <span style={{float: 'right'}}><strong>{this.state.percent}</strong>%</span>
+                    <span
+                        style={{float: 'right'}}><strong>{this.state.percent}</strong>%</span>
                 </div>
             </div>
 

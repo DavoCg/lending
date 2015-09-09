@@ -3,8 +3,10 @@ var colors = require('./colors');
 module.exports = {
     header:{
         height: '80px',
-        background: 'url("../images/symphony.png")',
-        borderBottom: 'solid 1px rgba(170, 170, 170, 0.30)'
+        backgroundColor: colors.main,
+        opacity: 0.5,
+        //background: 'url("../images/symphony.png")',
+        borderBottom: 'solid 1px rgba(170, 170, 170, 0.60)'
     },
     box: {
         backgroundColor: 'white',

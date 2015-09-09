@@ -18,7 +18,7 @@ var Box = React.createClass({
                     <div style={styles.box.content}>
                         {this.props.data.name}, {this.props.data.age}
                         <div style={styles.box.pictureBox}>
-                            <Image className='image-filter' speed={0.5} style={styles.box.picture} src={this.props.data.picture} alt=""/>
+                            <Image className='image-filter' speed={0.9} style={styles.box.picture} src={this.props.data.picture} alt=""/>
                         </div>
                     </div>
                     <div style={styles.box.description}>
