@@ -9,7 +9,7 @@ module.exports = {
             username: mongo.username,
             password: mongo.password,
             hosts: mongo.hosts,
-            database: 'asmr-stream'
+            database: 'lending'
         })
     },
     test: {
@@ -17,7 +17,7 @@ module.exports = {
             username: mongo.username,
             password: mongo.password,
             hosts: mongo.hosts,
-            database: 'asmr-stream-test'
+            database: 'lending'
         })
     }
 };

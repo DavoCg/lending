@@ -28,3 +28,27 @@ body{
 .image-filter{
     -webkit-filter: grayscale(60%);
 }
+
+.nav-item:hover{
+    cursor: pointer;
+
+}
+
+.nav-item-bordered:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: solid 1px #EFEFEF;
+    color: #EFEFEF;
+}
+
+.react-tabs{
+    color: #565A5C;
+}
+
+.react-tabs [role=tab][aria-selected=true] {
+    border-color: rgba(170, 170, 170, 0.78);
+    background-color: #ecf0f1;
+}
+
+.react-tabs [role=tablist] {
+    border-bottom: rgba(170, 170, 170, 0.48) 1px solid;
+}

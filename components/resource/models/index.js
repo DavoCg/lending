@@ -1,5 +1,7 @@
 var user = require('./user');
+var loan = require('./loan');
 
 module.exports = {
-    user: user
+    user: user,
+    loan: loan
 };

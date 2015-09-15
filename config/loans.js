@@ -1,6 +1,6 @@
 module.exports = {
     all: {
-        model: 'streamer',
+        model: 'loan',
         routes: {
             list: {
                 path: '/',

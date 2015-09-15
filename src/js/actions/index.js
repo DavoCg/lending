@@ -6,5 +6,8 @@ module.exports = {
     loginGoogle: Reflux.createAction(),
     logout: Reflux.createAction(),
     getUser: Reflux.createAction(),
-    refreshUser: Reflux.createAction()
+    refreshUser: Reflux.createAction(),
+
+    fetchLoans: Reflux.createAction(),
+    fetchLoan: Reflux.createAction()
 };

@@ -1,0 +1,54 @@
+.modal-background{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20000000;
+    background-color: rgba(0,0,0,0.75)
+}
+
+.modal{
+    display: block;
+    margin: auto;
+    width: 35vw;
+    background-color: white;
+    border-radius: 1px;
+    opacity: 1;
+    margin-top: 30vh;
+    color: #565A5C
+}
+
+
+.modal-no-display{
+    display: none;
+}
+
+.modal-no-display-animation{
+    -webkit-animation: modal-no-display-animation 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.modal-open{
+    -webkit-animation: modal-open 0.2s;
+}
+
+.modal-close{
+    -webkit-animation: modal-close 0.2s;
+}
+
+
+@-webkit-keyframes modal-open {
+    from { opacity: 0; display: none; transform: scale(0.7 ,0.7)}
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes modal-close {
+    from { opacity: 1; }
+    to {  opacity: 0; transform: scale(0.7 ,0.7); visibility: hidden;}
+}
+
+@-webkit-keyframes modal-no-display-animation {
+    from { opacity: 1; }
+    to {  opacity:0; visibility: hidden;}
+}

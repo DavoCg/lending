@@ -17,10 +17,6 @@ module.exports = {
             update: {
                 path: '/:id',
                 method: 'put'
-            },
-            changePassword: {
-                path: '/:id/password',
-                method: 'put'
             }
         }
     }

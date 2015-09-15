@@ -12,6 +12,7 @@ var externals = [
     'react',
     'react-router',
     'react-dropzone',
+    'react-highcharts',
     'react-avatar-editor',
     'classnames',
     'reflux',

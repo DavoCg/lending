@@ -1,11 +1,15 @@
 var config = require('../config');
 var request = require('superagent');
 var auth = require('./auth');
+var qs = require('querystring');
 var host = config.server.host + ':' + config.server.port;
 
 module.exports = {
-    get(path, done){
+    get(path, options, done){
+        if(typeof options === 'function') done = options;
+
         request.get(host + path)
+            .query(options.query || {})
             .set('token', auth.getToken('asmr'))
             .end(function(err, result){
                 if(err) return done(err);

@@ -3,11 +3,11 @@ var colors = require('./colors');
 module.exports = {
     banner: {
         width: '100%',
-        height: '500px',
+        height: '47vh',
         margin: '0',
         backgroundColor: 'white',
-        backgroundImage: 'url("../images/bg.jpg")',
-        backgroundPosition: '50% 20%'
+        backgroundImage: 'url("../images/la.jpg")',
+        backgroundPosition: '50% 70%'
     },
     navbar: {
         width: '100%',

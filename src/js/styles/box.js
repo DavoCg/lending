@@ -2,11 +2,12 @@ var colors = require('./colors');
 
 module.exports = {
     header:{
-        height: '80px',
-        backgroundColor: colors.main,
-        opacity: 0.5,
-        //background: 'url("../images/symphony.png")',
-        borderBottom: 'solid 1px rgba(170, 170, 170, 0.60)'
+        height: '35px',
+        background: 'url("../images/paper_fibers.png")',
+        padding: '8px',
+        paddingTop: '10px',
+        borderBottom: 'solid 1px rgba(170, 170, 170, 0.30)',
+        opacity: 0.7
     },
     box: {
         backgroundColor: 'white',
@@ -21,7 +22,7 @@ module.exports = {
         borderRadius: '30px',
         float: 'right',
         marginRight: '5px',
-        marginTop: '-30px',
+        marginTop: '-40px',
         overflow: 'auto',
         boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)'
     },
@@ -32,22 +33,36 @@ module.exports = {
         '-webkit-saturate': '250%'
     },
     content: {
-        padding: '5px',
+        padding: '10px',
+        fontWeight: '900',
         fontSize: '1.1em'
     },
     description: {
         padding: '5px',
-        paddingTop: '10px',
+        paddingTop: '5px',
         paddingLeft: '10px',
         paddingRight: '15px',
-        height: '75px',
-        fontFamily: 'sourceSansProLight',
-        fontSize: '0.9em'
+        height: '65px',
+        fontWeight: '100',
+        fontSize: '0.95em',
+        opacity: 0.6
     },
     status: {
         paddingLeft: '15px',
         paddingRight: '15px',
         marginTop: '10px',
         paddingBottom: '10px'
+    },
+    tag: {
+        border: 'solid 1px rgba(170, 170, 170, 0.50)',
+        paddingLeft: '8px',
+        paddingRight: '8px',
+        paddingTop: '3px',
+        paddingBottom: '3px',
+        borderRadius: '2px',
+        margin: 0,
+        backgroundColor: 'rgba(209, 209, 209, 0.4)',
+        fontSize: '0.90em',
+        marginRight: '8px'
     }
 };
